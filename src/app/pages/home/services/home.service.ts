@@ -26,7 +26,7 @@ export class HomeService {
       about: AboutData;
       experience: ExperienceData;
       contact: ContactData;
-    }>('/data.json')
+    }>('data.json')
     .pipe(
       shareReplay(),
       catchError(() => EMPTY)
