@@ -1,0 +1,41 @@
+$breakpoints-up: (
+  medium: 40em,
+  large: 64em,
+  xlarge: 87.5em,
+);
+
+$breakpoints-down: (
+  small: 40em,
+  medium: 64em,
+  large: 87.5em,
+);
+
+@mixin grid($columns: 3, $gap: 1rem) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin auto-grid($min: 240px, $gap: 1rem) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+}
+
+@mixin flex($justify: space-between, $align: center) {
+  align-items: $align;
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

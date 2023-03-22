@@ -1,0 +1,60 @@
+@forward "text";
+@forward "button";
+@forward "sizing";
+@forward "colors";
+@forward "a";
+@use "fonts";
+
+* {
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+:root {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+body {
+  font-family: fonts.$normal;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+:focus {
+  outline: 2px dashed var(--accent);
+  outline-offset: 3px;
+}
+
+ngx-md > * {
+  padding: 1rem 0;
+}
+
+ngx-md img {
+  max-width: 100%;
+  opacity: 0.5;
+}
+
+ngx-md p {
+  padding: 0.5rem 0;
+}
+
+ngx-md h1 {
+  font-size: 3rem;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}

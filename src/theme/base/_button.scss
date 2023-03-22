@@ -1,0 +1,32 @@
+button {
+  background-color: var(--primary-alpha);
+  border: unset;
+  border-radius: var(--radius-sm);
+  color: var(--contrast);
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 0.078rem;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.primary button {
+  background-color: var(--primary);
+  color: var(--contrast-dark);
+}
+
+.secondary button {
+  background-color: var(--accent);
+  color: var(--contrast-dark);
+}
+
+.outline button {
+  background-color: transparent;
+  box-shadow: 0 0 0 1px var(--primary);
+  color: var(--contrast);
+
+  &:hover {
+    background-color: var(--primary-alpha);
+  }
+}

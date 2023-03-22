@@ -1,0 +1,41 @@
+:host {
+  background-blend-mode: screen;
+  background-color: var(--dark);
+  background-image: url("https://images.unsplash.com/photo-1524439210809-5b21a2e18582?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2002&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--contrast);
+  display: block;
+  min-height: 100vh;
+
+  &.dark-mode {
+    background-blend-mode: multiply;
+  }
+}
+
+main {
+  padding: 2rem 8vw;
+}
+
+span {
+  animation: fade-in 0.5s ease;
+  color: var(--primary);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.active {
+  background-color: var(--accent-alpha);
+  border-radius: var(--radius-sm);
+}
+
+@keyframes fade-in {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,78 @@
+@use "fonts";
+
+h1,
+h2 {
+  letter-spacing: 0.025em;
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 4rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
+  &::before {
+    background-color: var(--primary-alpha);
+    border-radius: 2rem;
+    bottom: 0.5rem;
+    content: "<h1>";
+    height: 1.3rem;
+    left: -1rem;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &::after {
+    bottom: 1rem;
+    content: "</h1>";
+    position: absolute;
+    right: 0;
+  }
+}
+
+h2 {
+  color: var(--accent);
+  font-family: "Hand";
+  font-size: 2.75rem;
+  font-weight: 300;
+  letter-spacing: -0.032rem;
+  line-height: 1;
+  margin-top: -1.5rem;
+  opacity: 0.8;
+  position: relative;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.125rem;
+  letter-spacing: 0.016px;
+}
+
+h5 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+h6 {
+  color: var(--accent);
+  font-family: "Hand";
+  font-size: 2rem;
+}
+
+p,
+li {
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+  line-height: 1.8rem;
+}

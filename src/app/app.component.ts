@@ -1,20 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'pr-root',
   standalone: true,
   imports: [RouterOutlet],
   template: ` <router-outlet></router-outlet> `,
-  styles: [
-    `
-      :host {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-      }
-    `,
-  ],
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  @HostBinding('class.dark-mode') isDarkMode = true;
+}
