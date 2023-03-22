@@ -23,7 +23,7 @@ jobs:
       - run: yarn install
         env:
           CI: true
-      - name: Build afb-ui library
+      - name: Build afb-ui Library
         run: yarn build --project=afb-ui
         timeout-minutes: 2
       - name: Build Project
